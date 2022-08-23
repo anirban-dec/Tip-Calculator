@@ -1,34 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tip Calculator</title>
+    <title>Tip Calulator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <h1>Tip Calculator</h1><br>
-        <div class="bill-main">
-            
-            <label class="bill-amt">Bill Amount</label>
-            <input type="text" id="bill-amount" name="" ><br><br>
-            
-            <label>Tip Percentage</label>
-            <input type="text" id="tip-perc" name="" placeholder="Tip Percentage you want to give"><br><br>
-
-            <label>Tip Amount</label>
-            <input type="text" id="tip-amount" name="" disabled><br><br>
-
-            <label>Total Bill Amount </label>
-            <input type="text" id="total-bill" name="" disabled><br><br>
-
-            <button onclick="calc()" class="btn">Calculate</button>
+    <div class="logo">
+        <img src="https://store-images.s-microsoft.com/image/apps.64649.9007199267041669.89c4417c-1484-4790-b795-9a58d84dc1f1.b488bbbf-ffaa-4689-b62f-633fa8db99b0" alt="logo">
+    </div>
+    <div class="tip-calculator">
+        <div class="partOne">
+            <label for="">Bill</label>
+            <input type="text" class="input bill-input" id="bill-input"><br>
+            <label for="">Tip Percentage</label>
+            <div class="tip">
+                <div class="tips tip5">5%</div>
+                <div class="tips tip10">10%</div>
+                <div class="tips tip15 active-tip">15%</div>
+                <div class="tips tip25">25%</div>
+                <div class="tips tip50">50%</div>
+        
+                <div id="tip-custom" ><input type="text" class="tip-custom" placeholder="Custom"></div>
+            </div>
         </div>
-    </main>
-    <script src="App.js"></script>
-    
+        <div class="result">
+            <div class="tip-amount">
+                <div class="text">
+                    <p>Tip Amount</p>
+                </div>
+                <div class="amount" id="tip-amount">$100</div>
+            </div>
+            <div class="total">
+                <div class="text">
+                    <p>Total Bill</p>
+                </div>
+                <div class="amount" id="total-amount">$100</div>
+            </div>
+            <div class="reset">RESET</div>
+
+        </div>
+    </div>
+
+  <script src="App.js"></script>  
 </body>
 </html>
